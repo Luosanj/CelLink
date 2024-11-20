@@ -2,7 +2,7 @@ CelLink
 ===================================
 
 **CelLink** is a Python for single-cell multi-omics integration, especially for datasets with weak feature linkage and imbalanced cell populations.
-The link of the paper is <https://www.biorxiv.org/content/10.1101/2024.11.08.622745v1/>`_
+The link of the paper is https://www.biorxiv.org/content/10.1101/2024.11.08.622745v1
 
 .. image:: images/pipeline.png
    :width: 700
