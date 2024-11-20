@@ -1,10 +1,6 @@
 # Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'CelLink'
 copyright = '2024, Xin Luo'
@@ -12,7 +8,6 @@ author = 'Xin Luo'
 release = '0.1.3'
 
 # -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
     'nbsphinx',
@@ -42,7 +37,4 @@ def setup(app):
     app.add_css_file('my_theme.css')
 
 html_static_path = ['_static'] 
-
-# Set notebooks to render on a specific kernel (if needed)
-nbsphinx_kernel_name = 'python3'
 
