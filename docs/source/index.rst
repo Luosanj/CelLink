@@ -7,6 +7,8 @@ The link of the paper is <https://www.biorxiv.org/content/10.1101/2024.11.08.622
 .. image:: /docs/images/pipeline.png
    :width: 700
 
+CelLink uniquely enables cell subtype annotation, correction of mislabelled cells, and spatial transcriptomic analyses by imputing transcriptomic profiles for spatial proteomics data. Its great ability to impute large-scale paired single-cell multi-omics profiles positions it as a pivotal tool for building single-cell multi-modal foundation models.
+
 Check out the `Tutorial` section for its usage.
 
 .. note::
