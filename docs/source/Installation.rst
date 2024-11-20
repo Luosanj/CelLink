@@ -1,6 +1,9 @@
 Installation
 ============
 
+Installation
+------------
+
 Source code of CelLink package is available at https://github.com/liu-bioinfo-lab/CelLink.
 
 CelLink can be installed from from Pypi:
