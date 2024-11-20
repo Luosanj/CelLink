@@ -1,13 +1,15 @@
 # Configuration file for the Sphinx documentation builder.
 
-# -- Project information -----------------------------------------------------
+# -- Project information
 
 project = 'CelLink'
 copyright = '2024, Xin Luo'
 author = 'Xin Luo'
-release = '0.1.3'
 
-# -- General configuration ---------------------------------------------------
+release = '1.0'
+version = '0.1.3'
+
+# -- General configuration
 
 extensions = [
     'nbsphinx',
@@ -37,4 +39,3 @@ def setup(app):
     app.add_css_file('my_theme.css')
 
 html_static_path = ['_static'] 
-
