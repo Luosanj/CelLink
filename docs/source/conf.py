@@ -9,12 +9,10 @@
 project = 'CelLink'
 copyright = '2024, Xin Luo'
 author = 'Xin Luo'
-release = '0.1'
+release = '0.1.3'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-extensions = []
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -35,6 +33,7 @@ extensions = [
 
 # Exclude build directory
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
+source_suffix = ['.rst', '.ipynb']
 
 # Set notebooks to render on a specific kernel (if needed)
 nbsphinx_kernel_name = 'python3'
