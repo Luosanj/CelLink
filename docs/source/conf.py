@@ -7,7 +7,7 @@ copyright = '2024, Xin Luo'
 author = 'Xin Luo'
 
 release = '1.0'
-version = '0.1.3'
+version = '0.1.4'
 
 # -- General configuration
 
