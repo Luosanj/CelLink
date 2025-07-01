@@ -1,4 +1,4 @@
-Example 2: CITE-seq imbalanced pancreas data integration
+Example 2: Imbalanced scRNA-seq and CODEX data from a pancreas tissue.
 ========================================================
 
 .. toctree::
