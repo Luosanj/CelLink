@@ -1,4 +1,4 @@
-Example 2: Imbalanced scRNA-seq and CODEX data from a pancreas tissue.
+Example 2: scRNA-seq and CODEX data from pancreas tissue without celltype.
 ========================================================
 
 .. toctree::
