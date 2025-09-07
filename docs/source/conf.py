@@ -1,5 +1,9 @@
 # Configuration file for the Sphinx documentation builder.
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../..'))
+
 # -- Project information
 
 project = 'CelLink'
@@ -19,6 +23,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
 ]
+
+autosummary_generate = True
 
 # nbsphinx configuration: do not execute notebooks during documentation build on ReadTheDocs
 nbsphinx_execute = 'never'

@@ -23,3 +23,4 @@ Contents
 
    Installation
    tutorials/index.rst
+   api.rst
