@@ -19,12 +19,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 5
-   
-   tutorials/index.rst
-  
-
-.. toctree::
    :maxdepth: 2
 
    Installation
+   tutorials/index.rst

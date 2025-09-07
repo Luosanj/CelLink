@@ -20,6 +20,13 @@ extensions = [
     'sphinx.ext.intersphinx',
 ]
 
+# nbsphinx configuration: do not execute notebooks during documentation build on ReadTheDocs
+nbsphinx_execute = 'never'
+# Alternatively, to avoid execution but still show outputs, use 'never'. If you want execution set to 'auto' or 'always'.
+
+nbsphinx_allow_errors = False
+nbsphinx_timeout = 120
+
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
@@ -38,4 +45,4 @@ epub_show_urls = 'footnote'
 def setup(app):
     app.add_css_file('my_theme.css')
 
-html_static_path = ['_static'] 
+html_static_path = ['_static']
