@@ -1,5 +1,5 @@
-from . import metrics
-from .model import Cellink
-
 __version__ = "0.1.4"
-__all__ = ["metrics"]
+
+from src.cellink.model import Cellink
+from . import utils
+from . import metrics
