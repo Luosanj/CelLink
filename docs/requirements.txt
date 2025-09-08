@@ -1,9 +1,12 @@
 nbsphinx
 pandoc
 sphinx==7.1.2
-sphinx-rtd-theme==1.3.0rc1
+sphinx_rtd_theme
 nbconvert
 jupyter-client
 ipykernel
 nbformat
 widgetsnbextension
+sphinx_autodoc_typehints
+sphinx_copybutton
+sphinx_rtd_theme
