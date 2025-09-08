@@ -9,3 +9,5 @@ This document provides a comprehensive API specification for the ``CelLink`` pac
    :recursive:
 
    CelLink.metrics
+   CelLink.model
+   CelLink.utils
