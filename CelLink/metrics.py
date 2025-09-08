@@ -10,12 +10,16 @@ def cell_type_matching_accuracy(m1_source_ct, m1_predict_ct, m2_source_ct, m2_pr
 
     Params
     ----------
-    m1_source_ct: list, the original cell type list of modality 1.
-    m1_predict_ct: list, the predicted cell type list of modality 1.
-    m2_source_ct: list, the original cell type list of modality 2.
-    m2_predict_ct: list, the predicted cell type list of modality 2.
+    m1_source_ct: list
+        the original cell type list of modality 1.
+    m1_predict_ct: list
+        the predicted cell type list of modality 1.
+    m2_source_ct: list
+        the original cell type list of modality 2.
+    m2_predict_ct: list
+        the predicted cell type list of modality 2.
 
-    Return
+    Returns
     --------
     acc: float, the cell-type prediction accuracy
     """
