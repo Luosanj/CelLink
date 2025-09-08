@@ -1,3 +1,4 @@
+cellink-luo
 nbsphinx
 pandoc
 sphinx==7.1.2
