@@ -1,14 +1,11 @@
 API documentation
 =================
 
-This section provides detailed API documentation for all public functions
-and classes in the ``CelLink`` package.
+This document provides a comprehensive API specification for the ``CelLink`` package, detailing all available public functions and classes.
 
 .. autosummary::
    :toctree: api
    :template: module.rst
    :recursive:
 
-   CelLink.model
-   CelLink.utils
-   CelLink.metrics
+   CelLink
