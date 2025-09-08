@@ -6,3 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "CelLink"
 version = "0.1.4"
 description = "Cell linking package"
+
+[tool.setuptools.packages.find]
+include = ["CelLink*"]
+exclude = ["data*", "experiment*", "docs*", "tests*"]
