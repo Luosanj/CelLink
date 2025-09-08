@@ -1,14 +1,12 @@
 r"""
 Sphinx configuration
 """
-# add system path to make maxfuse importable
+
 import inspect
 import sphinx_autodoc_typehints
 import os
 import sys
 
-# Ensure the project root (the parent of this docs directory) is on sys.path
-# so Sphinx can import the CelLink package during autosummary generation.
 docs_dir = os.path.dirname(__file__)
 project_root = os.path.abspath(os.path.join(docs_dir, '..', '..'))
 if project_root not in sys.path:
@@ -18,7 +16,7 @@ project = 'CelLink'
 version = '0.0.1'
 release = '0.0.1'
 author = "Xin Luo"
-copyright = "Copyright Xin Luo"
+copyright = "Xin Luo"
 
 extensions = [
     'sphinx.ext.autodoc',
