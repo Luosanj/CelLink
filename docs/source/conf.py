@@ -18,6 +18,7 @@ project = 'CelLink'
 version = '0.0.1'
 release = '0.0.1'
 author = "Xin Luo"
+copyright = "Copyright Xin Luo"
 
 extensions = [
     'sphinx.ext.autodoc',

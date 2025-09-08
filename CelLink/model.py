@@ -16,7 +16,9 @@ import umap
 import warnings
 
 class Cellink:
-     
+    """
+    Core Cellink class
+    """     
     def __init__(self, full_ann1, full_ann2, shared_ann1, shared_ann2, partition = True):
          """
          CelLink Input pre-processing 
