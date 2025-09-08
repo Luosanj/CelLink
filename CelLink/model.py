@@ -1,9 +1,9 @@
 import numpy as np
-import ot 
+import ot
 import matplotlib.pyplot as plt
-from utils import drop_low_variability_columns
-from utils import graph_smoothing
-from utils import cdist_correlation
+from .utils import drop_low_variability_columns
+from .utils import graph_smoothing
+from .utils import cdist_correlation
 import anndata as ad
 import scanpy as sc
 import scipy
@@ -792,8 +792,7 @@ class Cellink:
         axs[0].legend(handles = legend_celltype, title = "Cell Types", loc = loc)
         axs[1].legend(handles = legend_celltype, title = "Cell Types", loc = loc)
         plt.show()
-        
 
-    
 
-        
+
+
