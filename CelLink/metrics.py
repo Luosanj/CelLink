@@ -1,3 +1,7 @@
+"""
+Evaluation metrics for alignment quality, imputation accuracy, and graph connectivity.
+"""
+
 import numpy as np
 from sklearn.metrics import silhouette_score
 from sklearn.neighbors import kneighbors_graph

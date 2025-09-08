@@ -1,3 +1,6 @@
+"""
+Core Cellink class and algorithms for multimodal cell alignment, transport, and feature imputation.
+"""
 import numpy as np
 import ot
 import matplotlib.pyplot as plt

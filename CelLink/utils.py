@@ -1,3 +1,6 @@
+"""
+Small helper utilities for preprocessing, graph smoothing, and distance computations used by CelLink.
+"""
 import numpy as np
 
 
@@ -116,6 +119,6 @@ def cdist_correlation(arr1, arr2):
 
 
 
-    
+
 
 
