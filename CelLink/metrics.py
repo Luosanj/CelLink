@@ -8,20 +8,21 @@ def cell_type_matching_accuracy(m1_source_ct, m1_predict_ct, m2_source_ct, m2_pr
     """
     Calculate the cell-type prediction accuracy of cell-cell alignment.
 
-    Params
+    Parameters
     ----------
-    m1_source_ct: list
-        the original cell type list of modality 1.
-    m1_predict_ct: list
-        the predicted cell type list of modality 1.
-    m2_source_ct: list
-        the original cell type list of modality 2.
-    m2_predict_ct: list
-        the predicted cell type list of modality 2.
+    m1_source_ct : list
+        The original cell type labels of modality 1.
+    m1_predict_ct : list
+        The predicted cell type labels of modality 1.
+    m2_source_ct : list
+        The original cell type labels of modality 2.
+    m2_predict_ct : list
+        The predicted cell type labels of modality 2.
 
     Returns
-    --------
-    acc: float, the cell-type prediction accuracy
+    -------
+    float
+        The overall cell-type prediction accuracy (rounded to 4 decimals).
     """
     n1 = len(m1_source_ct)
     n2 = len(m2_source_ct)
@@ -33,16 +34,19 @@ def cell_type_matching_accuracy(m1_source_ct, m1_predict_ct, m2_source_ct, m2_pr
 
 def average_sihouette_width(embedding, cell_type_label):
     """
-    Calculate the average sihouette score of integration performance.
+    Calculate the average silhouette score of integration performance.
 
-    Params
+    Parameters
     ----------
-    embedding: np.array, the 2d array of embedding, shape: (n_1 + n2, 2).
-    cell_type_label: np.array, the 1d array of the cell type, shape: (n_x + n_y,).
+    embedding : np.ndarray of shape (n_samples, n_dims)
+        The 2D (or low-dim) embedding array used for silhouette calculation.
+    cell_type_label : array-like of shape (n_samples,)
+        The cell type labels corresponding to each embedding point.
 
-    Return
-    --------
-    sihou_score: float, the average sihouette score
+    Returns
+    -------
+    float
+        The average silhouette score (rounded to 4 decimals).
     """
     sihouette_avg = silhouette_score(embedding, cell_type_label) 
     sihouette_avg = round(sihouette_avg, 4)
@@ -50,16 +54,19 @@ def average_sihouette_width(embedding, cell_type_label):
 
 def feature_imputation_accuracy_corr(m1_feature, m2_aligned_feature1):
     """
-    Calculate the feature imputation accuracy of the aligned feature profile.
+    Calculate the feature imputation accuracy of the aligned feature profile using Pearson correlation.
 
-    Params
+    Parameters
     ----------
-    m1_feature: np.array, the 2d array of modality 1 feature profile, shape: (n, g).
-    m2_aligned_feature1: np.array, the 2d array of the aligned modality-1 feature profile of modality 2, shape: (n, g).
+    m1_feature : np.ndarray of shape (n_samples, n_features)
+        The original modality-1 feature matrix.
+    m2_aligned_feature1 : np.ndarray of shape (n_samples, n_features)
+        The imputed (aligned) modality-1 feature matrix obtained for modality 2.
 
-    Return
-    --------
-    impute_acc: float, the feature imputation accuracy
+    Returns
+    -------
+    float
+        The average per-sample Pearson correlation (imputation accuracy).
     """
     assert m1_feature.shape == m2_aligned_feature1.shape
     n_samples = m1_feature.shape[0]
@@ -74,14 +81,17 @@ def feature_imputation_rmse(m1_feature, m2_aligned_feature1):
     """
     Calculate the RMSE of the aligned feature profile.
 
-    Params
+    Parameters
     ----------
-    m1_feature: np.array, the 2D array of modality 1 feature profile, shape: (n, g).
-    m2_aligned_feature1: np.array, the 2D array of the aligned modality-1 feature profile of modality 2, shape: (n, g).
+    m1_feature : np.ndarray of shape (n_samples, n_features)
+        The original modality-1 feature matrix.
+    m2_aligned_feature1 : np.ndarray of shape (n_samples, n_features)
+        The imputed (aligned) modality-1 feature matrix obtained for modality 2.
 
-    Return
-    --------
-    impute_rmse: float, the RMSE of the feature imputation
+    Returns
+    -------
+    float
+        The root mean squared error between the original and imputed features.
     """
     assert m1_feature.shape == m2_aligned_feature1.shape
     error = m1_feature - m2_aligned_feature1
@@ -92,17 +102,21 @@ def feature_imputation_rmse(m1_feature, m2_aligned_feature1):
 
 def uniFOSCTTM(m1_embedding, m2_embedding, true_matches_for_m2):
     """
-    Calculate the proportion of samples closer than the true paired sample
+    Calculate the proportion of samples closer than the true paired sample (uniFOSCTTM).
 
-    Params
+    Parameters
     ----------
-    m1_embedding: np.array, the embedding of modality 1, shape: (n, d).
-    m2_embedding: np.array, the embedding of modality 2, shape: (n, d).
-    true_matches_for_m1: 1d array, the indices of the matched cells for modality 1 from modality 2 
+    m1_embedding : np.ndarray of shape (n, d)
+        Embedding of modality 1.
+    m2_embedding : np.ndarray of shape (n, d)
+        Embedding of modality 2.
+    true_matches_for_m2 : array-like of length n
+        Indices of the true matched cells in modality 1 for each cell in modality 2.
 
-    Return
+    Returns
     -------
-    foscttm: float, the foscttm score
+    float
+        The uniFOSCTTM score (rounded to 4 decimals).
     """
     distance_matrix = distance.cdist(m2_embedding, m1_embedding, metric = 'euclidean')
     n = len(true_matches_for_m2)
@@ -121,13 +135,19 @@ def calculate_graph_connectivity(data, labels, k=15):
     """
     Calculate the Graph Connectivity for each cell type in the dataset.
 
-    Args:
-    data (np.ndarray): The dataset where rows are samples and columns are features.
-    labels (np.array): The cell type labels for each sample in the dataset.
-    k (int): Number of nearest neighbors to consider for each cell.
+    Parameters
+    ----------
+    data : np.ndarray of shape (n_samples, n_features)
+        The dataset where rows are samples and columns are features.
+    labels : array-like of shape (n_samples,)
+        The cell type labels for each sample.
+    k : int, default=15
+        Number of nearest neighbors to consider for each cell.
 
-    Returns:
-    float: The Graph Connectivity score.
+    Returns
+    -------
+    float
+        The graph connectivity score averaged across cell types.
     """
     kng = kneighbors_graph(data, n_neighbors=k, mode='connectivity', include_self=False)
     G = nx.from_scipy_sparse_array(kng)

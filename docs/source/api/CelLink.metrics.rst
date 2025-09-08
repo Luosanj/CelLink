@@ -6,7 +6,6 @@ CelLink.metrics
    
    
    
-
    
    
    .. rubric:: Functions
@@ -21,5 +20,5 @@ CelLink.metrics
       feature_imputation_rmse
       uniFOSCTTM
       calculate_graph_connectivity
-   
+
 
