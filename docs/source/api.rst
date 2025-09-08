@@ -8,4 +8,4 @@ This document provides a comprehensive API specification for the ``CelLink`` pac
    :template: module.rst
    :recursive:
 
-   CelLink
+   CelLink.metrics
