@@ -28,4 +28,4 @@ CelLink
    :template: module.rst
    :recursive:
 
-   CelLink.metrics
+   CelLink.metrics.rst
