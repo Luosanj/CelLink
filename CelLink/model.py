@@ -1,5 +1,5 @@
 """
-Core Cellink class and algorithms for multimodal cell alignment, transport, and feature imputation.
+Core Cellink class and algorithms for multimodal cell alignment, transport, and feature imputation. Click the Cellink class to see its methods. 
 """
 import numpy as np
 import ot
