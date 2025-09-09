@@ -22,5 +22,5 @@ Contents
    :maxdepth: 2
 
    Installation
-   tutorials/index.rst
+   tutorials
    api.rst
